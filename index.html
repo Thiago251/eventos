@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Organograma Investigativo Ampliado - Matriz Global Completa</title>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+
+    #header {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      z-index: 10;
+      background: rgba(13, 17, 23, 0.95);
+      padding: 12px 18px;
+      border: 1px solid #30363d;
+      border-left: 5px solid #da3633;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    }
+
+    h1 {
+      margin: 0 0 5px 0;
+      font-size: 1.1rem;
+      letter-spacing: 1.5px;
+      color: #f85149;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.75rem;
+      color: #8b949e;
+    }
+
+    #mynetwork {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .legend {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(22, 27, 34, 0.95);
+      border: 1px solid #30363d;
+      padding: 14px;
+      font-size: 0.75rem;
+      z-index: 10;
+      border-radius: 4px;
+    }
+
+    .legend-title {
+      font-weight: bold;
+      color: #58a6ff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .legend-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .color-box {
+      width: 12px;
+      height: 12px;
+      margin-right: 8px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <h1>MATRIZ DE ANÁLISE EXPANDIDA</h1>
+    <p>ESTRUTURA FIXA | CONSOLIDAÇÃO TOTAL DE VETORES GEOPOLÍTICOS E ECONÔMICOS</p>
+  </div>
+
+  <div class="legend">
+    <div class="legend-title">Níveis do Modelo</div>
+    <div class="legend-item"><div class="color-box" style="background: #da3633;"></div> Nível 1: Eventos Geradores</div>
+    <div class="legend-item"><div class="color-box" style="background: #d29922;"></div> Nível 2: Choques de Cadeia Global</div>
+    <div class="legend-item"><div class="color-box" style="background: #238636;"></div> Nível 3: Transmissão no Brasil</div>
+    <div class="legend-item"><div class="color-box" style="background: #a371f7;"></div> Nível 4: Resultados Finais</div>
+  </div>
+
+  <div id="mynetwork"></div>
+
+  <script type="text/javascript">
+    const nodes = new vis.DataSet([
+      // NÍVEL 1: ORIGENS (Y = 0) - ESPAÇAMENTO AJUSTADO
+      { id: 1, label: 'EVIDÊNCIA #01\nBloqueio de Ormuz\ne Operação Militar', shape: 'box', group: 'critico', x: -875, y: 0 },
+      { id: 2, label: 'EVIDÊNCIA #02\nEscalada Russa &\nMíssil Secreto UK', shape: 'box', group: 'critico', x: -625, y: 0 },
+      { id: 3, label: 'EVIDÊNCIA #03\nAtaques Hackers\n(DoJ, Fed, NASA, Senado)', shape: 'box', group: 'critico', x: -375, y: 0 },
+      { id: 4, label: 'EVIDÊNCIA #04\nAcordo Nuclear EUA-Saudita\n& Armas com IA', shape: 'box', group: 'critico', x: -125, y: 0 },
+      { id: 5, label: 'EVIDÊNCIA #05\nEl Niño Recorde &\nGuerras Tarifárias/Cotas', shape: 'box', group: 'critico', x: 125, y: 0 },
+      { id: 6, label: 'EVIDÊNCIA #06\nEixo Turquia-Saudita-Paquistão\n(Tecnologia + Dinheiro + Nuclear)', shape: 'box', group: 'critico', x: 375, y: 0 },
+      { id: 7, label: 'EVIDÊNCIA #07\nEstresse do Frete &\nRestrição de Rotas Aéreas/Marítimas', shape: 'box', group: 'critico', x: 625, y: 0 },
+      { id: 8, label: 'EVIDÊNCIA #08\nCorrida Espacial Militar &\nVigilância por Satélite', shape: 'box', group: 'critico', x: 875, y: 0 },
+
+      // NÍVEL 2: CHOQUES GLOBAIS (Y = 220)
+      { id: 9, label: 'IMPACTO A\nChoque Energético &\nSaturação Logística', shape: 'box', group: 'financeiro', x: -525, y: 220 },
+      { id: 10, label: 'IMPACTO B\nEscassez de GNL,\nNPK e Quebra Agrícola', shape: 'box', group: 'financeiro', x: -175, y: 220 },
+      { id: 11, label: 'IMPACTO C\nFuga para Ouro (US$ 4.600)\ne Abandono do Dólar', shape: 'box', group: 'financeiro', x: 175, y: 220 },
+      { id: 12, label: 'IMPACTO D\nEstagflação Global\n(PIB EUA 1,5% | PCE 3,7%)', shape: 'box', group: 'financeiro', x: 525, y: 220 },
+
+      // NÍVEL 3: TRANSMISSÃO BRASIL (Y = 440)
+      { id: 13, label: 'EF. BRASIL 01\nCusto Agrícola Elevado\n(Milho, Café, Algodão)', shape: 'box', group: 'nacional', x: -350, y: 440 },
+      { id: 14, label: 'EF. BRASIL 02\nAlta no Diesel &\nIPCA de Alimentos', shape: 'box', group: 'nacional', x: 0, y: 440 },
+      { id: 15, label: 'EF. BRASIL 03\nManutenção da Selic\nElevada por Mais Tempo', shape: 'box', group: 'nacional', x: 350, y: 440 },
+
+      // NÍVEL 4: RESULTADOS FINAIS (Y = 660)
+      { id: 16, label: 'RESULTADO FINAL 1\nGuerra Fria 2.0 Multidomínio\n[Probabilidade > 80%]', shape: 'box', group: 'resultado', x: -350, y: 660 },
+      { id: 17, label: 'RESULTADO FINAL 2\nRuptura Cibernética,\nFinanceira e Satelital', shape: 'box', group: 'resultado', x: 0, y: 660 },
+      { id: 18, label: 'RESULTADO FINAL 3\nCrise Alimentar Severa &\nEstagflação em Emergentes', shape: 'box', group: 'resultado', x: 350, y: 660 }
+    ]);
+
+    const edges = new vis.DataSet([
+      // Origem -> Global
+      { from: 1, to: 9, label: 'Rotas' },
+      { from: 1, to: 10, label: 'Gás/Insumos' },
+      { from: 1, to: 11, label: 'Risco' },
+      { from: 2, to: 11, label: 'Tensão' },
+      { from: 3, to: 12, label: 'Insegurança' },
+      { from: 4, to: 16, label: 'Militarização' },
+      { from: 5, to: 10, label: 'Estresse hídrico' },
+      { from: 5, to: 12, label: 'Protecionismo' },
+      { from: 6, to: 9, label: 'Segurança de Rotas' },
+      { from: 6, to: 11, label: 'Autonomia militar' },
+      { from: 7, to: 9, label: 'Custos de Frete' },
+      { from: 7, to: 12, label: 'Gargalo de Suprimentos' },
+      { from: 8, to: 17, label: 'Vulnerabilidade Digital' },
+
+      // Global -> Global
+      { from: 9, to: 12, label: 'Custos' },
+      { from: 11, to: 12, label: 'Câmbio' },
+
+      // Global -> Brasil
+      { from: 10, to: 13, label: 'Adubos' },
+      { from: 9, to: 14, label: 'Combustível' },
+      { from: 13, to: 14, label: 'Repasse' },
+      { from: 14, to: 15, label: 'IPCA' },
+
+      // Brasil -> Resultados Finais
+      { from: 2, to: 16, label: 'Escalada' },
+      { from: 3, to: 17, label: 'Ataques' },
+      { from: 11, to: 17, label: 'Desdolarização' },
+      { from: 12, to: 18, label: 'Oferta' },
+      { from: 15, to: 18, label: 'Aperto' },
+      { from: 6, to: 16, label: 'Bloco Muçulmano' }
+    ]);
+
+    const container = document.getElementById('mynetwork');
+    const data = { nodes: nodes, edges: edges };
+
+    const options = {
+      nodes: {
+        font: { color: '#f0f6fc', size: 10, face: 'Courier New' },
+        borderWidth: 2,
+        shadow: { enabled: true, color: 'rgba(0,0,0,0.8)', size: 6, x: 3, y: 3 },
+        margin: 10,
+        fixed: true
+      },
+      edges: {
+        color: { color: '#f85149', highlight: '#58a6ff' },
+        width: 1.5,
+        arrows: { to: { enabled: true, scaleFactor: 0.6 } },
+        font: { color: '#8b949e', size: 8, face: 'Courier New', background: '#0d1117' },
+        smooth: { type: 'cubicBezier', roundness: 0.2 }
+      },
+      groups: {
+        critico: { color: { background: '#490202', border: '#da3633' } },
+        financeiro: { color: { background: '#3d2e00', border: '#d29922' } },
+        nacional: { color: { background: '#0d381e', border: '#238636' } },
+        resultado: { color: { background: '#261047', border: '#a371f7' } }
+      },
+      physics: { enabled: false },
+      interaction: { dragNodes: false, dragView: true, zoomView: true }
+    };
+
+    const network = new vis.Network(container, data, options);
+    
+    network.once('afterDrawing', function() {
+      network.fit({ animation: true });
+    });
+  </script>
+</body>
+</html>
